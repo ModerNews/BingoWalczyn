@@ -1,17 +1,20 @@
 body {
-    background-color: rgb(252, 161, 3);
+    background-color: #b0160c;
     align-items: center;
-    font-family: 'Rajdhani Bold', Rajdhani;
+    font-family: 'Brush Script MT';
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 50px;
 }
 
 div {
-    background-color: white;
-    margin:0;
+    background-color: #820d0f;
+    color: #f88105;
+    margin: 0;
     text-align: center;
+    border-radius: 100px;
+    border: 2px solid #f88105;
 }
 
 .item {
@@ -19,9 +22,9 @@ div {
 }
 
 button {
-    background-color: brown; /* Green */
+    background-color: #57080c;
+    color: #f88105;
     border: none;
-    color: white;
     padding: 15px 32px;
     margin-top: 10px;
     text-align: center;
@@ -29,14 +32,24 @@ button {
     display: inline-block;
     font-size: 16px;
     border-radius: 8px;
-  }
+    border-radius: 100px;
+    border: 2px solid #f88105;
+}
 
 .button-container {
-    width: 600px;
-    overflow-y: auto;
-    background-color: white;
-    margin:auto;
+    font-family: 'Calibri';
+    background-color: #57080c;
+    color: #f88105;
+    border: none;
+    padding: 15px 32px;
+    margin-top: 10px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    border-radius: 100px;
+    border: 2px solid #f88105;
 }
 
 .button-container > button {
