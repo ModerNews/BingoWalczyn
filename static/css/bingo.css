@@ -37,6 +37,8 @@ button {
 }
 
 .button-container {
+    width: 600px;
+    overflow-y: auto;
     font-family: 'Calibri';
     background-color: #57080c;
     color: #f88105;
