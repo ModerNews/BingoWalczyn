@@ -36,4 +36,5 @@ async def websocket_endpoint(websocket: WebSocket):
         if data['event'] == 'register_user':
             __players__[data['username']] = Bingo()
 
-        elif data['event'] == 'update_user'
+        elif data['event'] == 'update_user':
+            pass
