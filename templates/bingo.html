@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/bingo.css">
+    </head>
+    <body>
+        <div class='title'>
+            <h1>Walczyn Bingo Online</h1>
+        </div>
+        <hr>
+        <div class='item'>
+            <div class='button-container'>
+                {% for line in bingo %}
+                    {% for item in line %}
+                        <button>{{item}}</button>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(252, 161, 3);
+    align-items: center;
+    font-family: 'Rajdhani Bold', Rajdhani;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+div {
+    background-color: white;
+    margin:0;
+    text-align: center;
+}
+
+.item {
+    padding: 10px;
+}
+
+button {
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+.button-container {
+    width: 600px;
+    overflow-y: auto;
+    background-color: white;
+    margin:auto;
+    text-align: center;
+}
+
+.button-container > button {
+    width: 100px;
+    height: 100px;
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    padding: 0;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
