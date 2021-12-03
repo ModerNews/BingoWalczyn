@@ -14,22 +14,38 @@ def generate_bingo(filepath: str, *, width: int = 5, height: int = 5, encoding: 
     return bingo
 
 
-def check_winner(bingo: list[list[int]], *, width: int = 5, height: int = 5) -> bool:
-    # horizontal
-    for line in bingo:
-        if all([1 == n for n in line]):
+class Bingo:
+    def __init__(self, *, content: list[list[int]] = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]):
+        self._content: list[list[int]] = content
+
+    def __repr__(self):
+        return repr(self._content)
+
+    def __str__(self):
+        return self.__repr__()
+
+    def __len__(self):
+        return len(self._content)
+
+    def __getitem__(self, item):
+        return self._content[item]
+
+    def check_winner(self, *, width: int = 5, height: int = 5) -> bool:
+        # horizontal
+        for line in self:
+            if all([1 == n for n in line]):
+                return True
+
+        # vertical
+        for i in range(len(self)):
+            if all(line[i] == 1 for line in self):
+                return True
+
+        # diagonal
+        if all(self[i][i] == 1 for i in range(len(self))):
+            return True
+        if all(self[i][i] == 1 for i in range(len(self) - 1, -1, -1)):
             return True
 
-    # vertical
-    for i in range(len(bingo)):
-        if all(line[i] == 1 for line in bingo):
-            return True
-
-    # diagonal
-    if all(bingo[i][i] == 1 for i in range(len(bingo))):
-        return True
-    if all(bingo[i][i] == 1 for i in range(len(bingo)-1, -1, -1)):
-        return True
-
-    # none
-    return False
+        # none
+        return False
