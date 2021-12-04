@@ -13,7 +13,7 @@ div {
     color: #f88105;
     margin: 0;
     text-align: center;
-    border-radius: 100px;
+    border-radius: 10px;
     border: 2px solid #f88105;
 }
 
@@ -32,13 +32,12 @@ button {
     display: inline-block;
     font-size: 16px;
     border-radius: 8px;
-    border-radius: 100px;
+    border-radius: 10px;
     border: 2px solid #f88105;
 }
 
 .button-container {
     width: 600px;
-    overflow-y: auto;
     font-family: 'Calibri';
     background-color: #57080c;
     color: #f88105;
@@ -50,16 +49,17 @@ button {
     display: inline-block;
     font-size: 16px;
     border-radius: 8px;
-    border-radius: 100px;
+    border-radius: 10px;
     border: 2px solid #f88105;
 }
 
 .button-container > button {
+    vertical-align:top;
     width: 100px;
     height: 100px;
-    background-color: brown; /* Green */
-    border: none;
-    color: white;
+    overflow-x: auto;
+    background-color: #820d0f; /* Green */
+    color: #f8ca96;
     padding: 0;
     margin-top: 15px;
     text-align: center;
