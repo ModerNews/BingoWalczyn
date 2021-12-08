@@ -51,6 +51,9 @@
                         window.location.replace("/bingo?u=" + data.hash)
                     }
                   }
+                  if(data.event === "game_end"){
+                      window.location.replace("/winner")
+                  }
                 }
             
                 function onError(evt)

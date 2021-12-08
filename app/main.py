@@ -40,9 +40,12 @@ async def bingo(request: Request):
     data = generate_bingo('words.txt')
     return templates.TemplateResponse('bingo.html', {"request": request, "bingo": data})
 
-@app.get("/game-end")
+
+@app.get("/winner")
 async def game_end(request: Request):
-    return templates.TemplateResponse('winner.html', {"request": request})
+    return templates.TemplateResponse('winner.html', {"request": request,
+                                                      "name": winner})
+
 
 @app.websocket("/websocket")
 async def websocket_endpoint(websocket: WebSocket):
@@ -59,7 +62,8 @@ async def websocket_endpoint(websocket: WebSocket):
             data = Update.parse_obj(data)
             __players__[__hashes__[data.hash]][data.column][data.row] = 1
             if __players__[__hashes__[data.hash]].check_winner():
-                await websocket.send_json({'event': "game_end",
-                                           'user': __hashes__[data.hash]})
+                await websocket.send_json({'event': "game_end"})
+                global winner
+                winner = __hashes__[data.hash]
                 logger.info(f'Winner is {__hashes__[data.hash]}')
             logger.warning(f'Updated {data.column}.{data.row} for {__hashes__[data.hash]}')
