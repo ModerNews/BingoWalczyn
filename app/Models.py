@@ -6,6 +6,6 @@ class User(BaseModel):
 
 
 class Update(BaseModel):
-    user: str  # username of updated user
+    hash: str  # hashed username of updated user
     column: int
     row: int
